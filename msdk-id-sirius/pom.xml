@@ -7,6 +7,34 @@
   </parent>
   <artifactId>msdk-id-sirius</artifactId>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>deps/sirius-src/chemistry_base/src/main/java</source>
+                <source>deps/sirius-src/fragmentation_tree/fragmentation_tree_construction/src/main/java</source>
+                <source>deps/sirius-src/ft_rework/src/main/java</source>
+                <source>deps/sirius-src/gibbs_sampling/src/main/java</source>
+                <source>deps/sirius-src/io/src/main/java</source>
+                <source>deps/sirius-src/isotope_pattern/isotope_pattern_analysis/src/main/java</source>
+                <source>deps/sirius-src/mass_decomposition/mass_decomposer/src/main/java</source>
+                <source>deps/sirius-src/sirius_api/src/main/java</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
   <repositories>
     <!--<repository>-->
@@ -15,19 +43,19 @@
       <!--<url>http://bio.informatik.uni-jena.de/repository/libs-release-local</url>-->
     <!--</repository>-->
 
-    <repository>
-      <id>bioinf-jena-sirirusCli</id>
-      <name>bioinf-jena-release</name>
-      <url>http://bio.informatik.uni-jena.de/artifactory/libs-releases-local</url>
-    </repository>
+    <!--<repository>-->
+      <!--<id>bioinf-jena-sirirusCli</id>-->
+      <!--<name>bioinf-jena-release</name>-->
+      <!--<url>http://bio.informatik.uni-jena.de/artifactory/libs-releases-local</url>-->
+    <!--</repository>-->
   </repositories>
 
   <dependencies>
-    <dependency>
-      <groupId>de.unijena.bioinf</groupId>
-      <artifactId>SiriusCLI</artifactId>
-      <version>3.1.3</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>de.unijena.bioinf</groupId>-->
+      <!--<artifactId>SiriusCLI</artifactId>-->
+      <!--<version>3.1.3</version>-->
+    <!--</dependency>-->
     <!--<dependency>-->
       <!--<groupId>de.unijena.bioinf.ms</groupId>-->
       <!--<artifactId>sirius_api</artifactId>-->
