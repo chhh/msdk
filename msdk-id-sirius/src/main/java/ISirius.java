@@ -13,13 +13,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import org.javatuples.Pair;
 
 /**
  * Created by evger on 14-May-18.
  */
 
 public class ISirius {
+
+  private static class Pair<K, V> {
+    final K key;
+    final V val;
+
+    public Pair(K key, V val) {
+      this.key = key;
+      this.val = val;
+    }
+  }
 
   /* This function is left here for non-msp files */
   private static Pair<double[], double[]> readCustomMsFile(String path) throws IOException {
@@ -87,7 +96,7 @@ public class ISirius {
     /* Runtime failure on fragmentation tree construction (NullPointer) - if used on MSMS provided by Tomas earlier */
     /* Runtime failure on fragmentation tree construction (assertion error) - if used on data from .msp */
 
-    List<IdentificationResult> results = sirius.identify(experiment);
+    List<IdentificationResult> results = sirius.identify(experiment, 10);
     return results;
   }
 }
