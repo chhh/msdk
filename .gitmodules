@@ -1,0 +1,3 @@
+[submodule "msdk-id-sirius/deps/sirius-src"]
+	path = msdk-id-sirius/deps/sirius-src
+	url = https://github.com/boecker-lab/sirius
