@@ -56,6 +56,8 @@ public class ISirius {
       throws MSDKException, IOException {
     final Sirius sirius = new Sirius();
 
+    MspSpectrum mspSpectrum1 = new MspSpectrum();
+
     /**
      *
      * TODO: Temporary added dependency back to the 3.1.3
